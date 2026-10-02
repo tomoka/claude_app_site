@@ -216,6 +216,40 @@ p {
   object-position: top;
 }
 
+/* ---------- hero visual (photo + real app screen) ---------- */
+.hero-visual {
+  position: relative;
+  width: min(500px, 100%);
+  aspect-ratio: 1 / 1.05;
+  margin-inline: auto;
+}
+
+.hero-photo img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 82%;
+  height: 80%;
+  object-fit: cover;
+  object-position: 40% 60%;
+  border-radius: 28px;
+  box-shadow: 0 24px 48px -24px rgb(0 0 0 / 0.3);
+}
+
+.phone.phone-overlay {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 42%;
+  margin: 0;
+  padding: 7px;
+  border-radius: 34px;
+}
+
+.phone.phone-overlay img {
+  border-radius: 27px;
+}
+
 /* ---------- sections ---------- */
 section {
   padding: 72px 0;
@@ -510,5 +544,14 @@ section {
 
   .phone {
     width: min(260px, 100%);
+  }
+
+  .phone.phone-overlay {
+    padding: 5px;
+    border-radius: 26px;
+  }
+
+  .phone.phone-overlay img {
+    border-radius: 21px;
   }
 }
